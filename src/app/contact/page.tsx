@@ -1,8 +1,16 @@
+import Image from 'next/image';
+
 export default function Contact() {
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-4">
             {/* Logo with round border and increased size */}
-            <img src="/pic.jpg" alt="Logo" className="w-60 h-60 rounded-full border-4 border-blue-500 mb-4" />
+            <Image 
+                src="/pic.jpg" 
+                alt="Logo" 
+                className="rounded-full border-4 border-blue-500 mb-4" 
+                width={240} // Actual width in pixels
+                height={240} // Actual height in pixels
+            />
             <h1 className="text-4xl font-bold text-gray-800 mb-4">This is My Contact Page</h1>
             <p className="text-lg text-gray-600 mb-6">Feel free to reach out for any inquiries or collaborations!</p>
             <div className="bg-white shadow-md rounded p-6">

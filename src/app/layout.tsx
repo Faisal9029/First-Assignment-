@@ -26,11 +26,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}>
         <Navbar />
-        {children}
+        <main className="container mx-auto p-4">
+          {children}
+        </main>
+        {/* Footer Section */}
+        <footer className="bg-gray-800 text-white py-8">
+          <div className="container mx-auto text-center">
+            <p className="mb-4">&copy; {new Date().getFullYear()} Faisal. All rights reserved.</p>
+            <div className="flex justify-center space-x-4 mb-4">
+              <a href="https://www.linkedin.com/in/faisal-sharif-/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+                LinkedIn
+              </a>
+              <a href="https://github.com/Faisal9029" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300">
+                GitHub
+              </a>
+              <a href="/contact" className="hover:text-blue-400">
+                Contact
+              </a>
+            </div>
+            <p className="text-sm">Built with ❤️ using Next.js and Tailwind CSS.</p>
+          </div>
+        </footer>
       </body>
     </html>
   );

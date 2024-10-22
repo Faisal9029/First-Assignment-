@@ -4,7 +4,7 @@ export default function Home() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="1.jpg " // Apne desired background image ka URL yahan daalain
+          src="/1.jpg" // Apne desired background image ka URL yahan daalain
           alt="Background"
           className="w-full h-full object-cover"
         />
